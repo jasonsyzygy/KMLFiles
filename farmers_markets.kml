@@ -5,29 +5,6 @@
             <Style id="normalPlacemark">
                 <IconStyle>
                     <Icon>
-                        <href>http://maps.google.com/mapfiles/kml/pushpin/red-pushpin.png</href>
-                    </Icon>
-                </IconStyle>
-            </Style>
-            <ExtendedData>
-                <Data name="LOCATION">
-                    <value>Seaway Bank Farmer's Market</value>
-                </Data>
-                <Data name="DAY">
-                    <value>Wednesday</value>
-                </Data>
-                <Data name="Map">
-                    <value>(41.73649711, -87.80784689)</value>
-                </Data>
-            </ExtendedData>
-            <Point>
-                <coordinates>-87.80784689,41.73649711</coordinates>
-            </Point>
-        </Placemark>
-        <Placemark>
-            <Style id="normalPlacemark">
-                <IconStyle>
-                    <Icon>
                         <href>http://maps.google.com/mapfiles/kml/pushpin/purple-pushpin.png</href>
                     </Icon>
                 </IconStyle>
