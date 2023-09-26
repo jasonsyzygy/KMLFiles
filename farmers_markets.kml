@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
     <Document>
+<Placemark>
+            <Style id="normalPlacemark">
+                <IconStyle>
+                    <Icon>
+                        <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <ExtendedData>
+                <Data name="LOCATION">
+                    <value>Seaway Bank Farmer's Market</value>
+                </Data>
+                <Data name="DAY">
+                    <value>Wednesday</value>
+                </Data>
+                <Data name="Map">
+                    <value>(41.93649711, -87.60784689)</value>
+                </Data>
+            </ExtendedData>
+            <Point>
+                <coordinates>-87.60784689,41.93649711</coordinates>
+            </Point>
+        </Placemark>
         <Placemark>
             <Style id="normalPlacemark">
                 <IconStyle>
