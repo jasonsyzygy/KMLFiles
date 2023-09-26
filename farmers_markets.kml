@@ -760,11 +760,11 @@
                     <value>Wednesday</value>
                 </Data>
                 <Data name="Map">
-                    <value>(41.86780306, -87.71044099)</value>
+                    <value>(41.76780306, -87.51044099)</value>
                 </Data>
             </ExtendedData>
             <Point>
-                <coordinates>-87.71044099,41.86780306</coordinates>
+                <coordinates>-87.51044099,41.76780306</coordinates>
             </Point>
         </Placemark>
     </Document>
