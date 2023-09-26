@@ -767,5 +767,28 @@
                 <coordinates>-87.51044099,41.76780306</coordinates>
             </Point>
         </Placemark>
+        <Placemark>
+            <Style id="normalPlacemark">
+                <IconStyle>
+                    <Icon>
+                        <href>http://maps.google.com/mapfiles/kml/pushpin/grn-pushpin.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <ExtendedData>
+                <Data name="LOCATION">
+                    <value>Covenant Bank - North Lawndale</value>
+                </Data>
+                <Data name="DAY">
+                    <value>Wednesday</value>
+                </Data>
+                <Data name="Map">
+                    <value>(41.76780306, -87.91044099)</value>
+                </Data>
+            </ExtendedData>
+            <Point>
+                <coordinates>-87.91044099,41.76780306</coordinates>
+            </Point>
+        </Placemark>
     </Document>
 </kml>
