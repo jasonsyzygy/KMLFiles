@@ -1,47 +1,47 @@
-on: push
-jobs:
-  job1:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2.3.2
+# on: push
+# jobs:
+#   job1:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v2.3.2
         
-      - name: Modify the specific files using scripts
-        run: |
-          --- shell scripts or command lines to execute ---
-          # http://maps.google.com/mapfiles/kml/pushpin/blue-pushpin.png
+#       - name: Modify the specific files using scripts
+#         run: |
+#           --- shell scripts or command lines to execute ---
+#           # http://maps.google.com/mapfiles/kml/pushpin/blue-pushpin.png
     
-          kmlFile=farmers_markets.kml
-          pushinpinURLPattern='http://maps.google.com/mapfiles/kml/pushpin/newPushpinURL'
-          pushinpinFilenamePattern="newPushpinURL"
-          pushpinColors=("blue" "grn" "ltblu" "pink" "purple" "red" "wht" "ylw")
+#           kmlFile=farmers_markets.kml
+#           pushinpinURLPattern='http://maps.google.com/mapfiles/kml/pushpin/newPushpinURL'
+#           pushinpinFilenamePattern="newPushpinURL"
+#           pushpinColors=("blue" "grn" "ltblu" "pink" "purple" "red" "wht" "ylw")
           
-          # randomIndex=$[$RANDOM % ${#pushpinColors[@]}]
-          # randomColor=${pushpinColors[$randomIndex]}
-          # newPushpinFilename="$randomColor-pushpin.png"
-          # echo $newPushpinFilename
-          # sed -i '' -e "s/$pushinpinFilenamePattern/$newPushpinFilename/g" $kmlFile
+#           # randomIndex=$[$RANDOM % ${#pushpinColors[@]}]
+#           # randomColor=${pushpinColors[$randomIndex]}
+#           # newPushpinFilename="$randomColor-pushpin.png"
+#           # echo $newPushpinFilename
+#           # sed -i '' -e "s/$pushinpinFilenamePattern/$newPushpinFilename/g" $kmlFile
           
-          for color in ${pushpinColors[@]}; do
-            oldPushpin="$color-pushpin.png"
-            count="`grep -wc $oldPushpin $kmlFile`"
+#           for color in ${pushpinColors[@]}; do
+#             oldPushpin="$color-pushpin.png"
+#             count="`grep -wc $oldPushpin $kmlFile`"
           
-            if [ $count != 0 ]
-            then
-              randomIndex=$[$RANDOM % ${#pushpinColors[@]}]
-              randomColor=${pushpinColors[$randomIndex]}
-              # echo "Replacing $color with $randomColor"
-              newPushpin="$randomColor-pushpin.png"
-              # echo "Replacing $oldPushpin with $newPushpin"
-              sed -i '' -e "s/$oldPushpin/$newPushpin/g" $kmlFile
-              break
-            fi
-          done
-      - name: Commit and push changes
-        run: |
-          git config --global user.name "jasonsyzygy"
-          git config --global user.email "jason.goodney@syzgy.co"
+#             if [ $count != 0 ]
+#             then
+#               randomIndex=$[$RANDOM % ${#pushpinColors[@]}]
+#               randomColor=${pushpinColors[$randomIndex]}
+#               # echo "Replacing $color with $randomColor"
+#               newPushpin="$randomColor-pushpin.png"
+#               # echo "Replacing $oldPushpin with $newPushpin"
+#               sed -i '' -e "s/$oldPushpin/$newPushpin/g" $kmlFile
+#               break
+#             fi
+#           done
+#       - name: Commit and push changes
+#         run: |
+#           git config --global user.name "jasonsyzygy"
+#           git config --global user.email "jason.goodney@syzgy.co"
     
-          git add -A
-          git commit -m "Updates farmers_markers.kml"
-          git push
+#           git add -A
+#           git commit -m "Updates farmers_markers.kml"
+#           git push
